@@ -43,8 +43,9 @@ npm start
 
 O ejecutarlos sucesivamenten de forma automática con el script shell
 ```sh
-chmod +x ./ejercicio-3/run-all.sh
-./ejercicio-3/run-all.sh
+cd ejercicio-3
+chmod +x ./run-all.sh
+./run-all.sh
 ```
 
 ### Ejercicio 3-1
