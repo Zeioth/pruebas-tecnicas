@@ -10,9 +10,9 @@ Prueba exploratoria y reporte de bugs.
 ![screenshot_2023-10-18_00-29-23_557364307](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/707530bb-f517-4667-a01d-b91b386fbec2)
 
 ## Ejercicio 2
-Automatización de una web:
+Automatización de una web.
 
-* DEMO EN YOUTUBE
+* [DEMO EN YOUTUBE](https://www.youtube.com/watch?v=TBSHSvQwmmI)
 * [CÒDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-2/cypress/cypress/e2e/get-first-automation-date-from-wikipedia.spec.ts)
 
 ### Como correr el proyecto (cypress)
@@ -24,7 +24,7 @@ npm start
 ```
 
 ## Ejercicio 3 (typescript)
-Tratamiento de datos en APIS:
+Tratamiento de datos en APIS.
 
 ### Como correr el proyecto
 Puedes correr los ejercicios uno a uno manualmente con
