@@ -19,7 +19,7 @@ Adicionalmente, he reportado otros 445 bugs en github en diferentes proyectos op
 ## Ejercicio 2
 Automatización de una web.
 
-* [CÒDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-2/cypress/cypress/e2e/get-first-automation-date-from-wikipedia.spec.ts)
+* [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-2/cypress/cypress/e2e/get-first-automation-date-from-wikipedia.spec.ts)
 * [DEMO EN YOUTUBE](https://www.youtube.com/watch?v=TBSHSvQwmmI)
 
 ### Como correr el proyecto (cypress)
@@ -49,7 +49,7 @@ chmod +x ./run-all.sh
 ```
 
 ### Ejercicio 3-1
-* [CÒDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/ejercicio-3-1/src/index.ts)
+* [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/ejercicio-3-1/src/index.ts)
 * OUTPUT
 ![screenshot_2023-10-18_00-49-06_728385744](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/c2c1bd37-82bc-4350-abfa-b6586bbf946b)
 
