@@ -43,7 +43,7 @@ npm start
 
 O ejecutarlos sucesivamenten de forma automática con el script shell
 ```sh
-cd ejercicio-3
+cd ./ejercicio-3
 chmod +x ./run-all.sh
 ./run-all.sh
 ```
