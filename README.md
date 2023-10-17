@@ -76,3 +76,5 @@ definir tu versión de node actual.
 ```
 nvm install v16 && nvm alias default v16 && nvm use v16
 ```
+
+Se recomienda usar una terminal shell. Este repositorio es compatible con Linux, MacOS y Windows.
