@@ -5,7 +5,7 @@ Prueba exploratoria y reporte de bugs.
 
 **RESPUESTA**
 * [Spectre.nvim](https://github.com/nvim-pack/nvim-spectre): Abrí el bug report [#133](https://github.com/nvim-pack/nvim-spectre/issues/133) de esté plugin de "buscar y reemplazar texto" para el editor de texto neovim, tras detectar que erá posible romper la interfaz de usuario al realizar ciertas acciones, dejando el programa inutilizable hasta ser reiniciado. Mi buxfix fué añadido al proyecto en el pull request [#138]([https://github.com/nvim-pack/nvim-spectre/pull/138). [DEMO EN YOUTUBE](https://www.youtube.com/watch?v=od9faf7FtOI).
-* Adicionalmente, he reportado otros 445 bugs en github en diferentes proyectos open source. [Aquí](https://github.com/Zeioth/zeioth-meta) y [aquí](https://github.com/Zeioth) podeis encontrar un breve resume de todos ellos.
+* Adicionalmente, he reportado otros 445 bugs en github en diferentes proyectos open source. [Aquí](https://github.com/Zeioth/zeioth-meta) y [aquí](https://github.com/Zeioth) podeis encontrar un breve resume de algunos interesantes.
 
 ![screenshot_2023-10-18_00-29-23_557364307](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/707530bb-f517-4667-a01d-b91b386fbec2)
 
