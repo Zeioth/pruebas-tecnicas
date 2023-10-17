@@ -30,10 +30,10 @@ npm install
 npm start
 ```
 
-## Ejercicio 3 (typescript)
+## Ejercicio 3
 Tratamiento de datos en APIS.
 
-### Como correr el proyecto
+### Como correr el proyecto  (typescript)
 Puedes correr los ejercicios uno a uno manualmente con
 
 ```sh
