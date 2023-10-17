@@ -33,21 +33,6 @@ npm start
 ## Ejercicio 3
 Tratamiento de datos en APIS.
 
-### Como correr el proyecto  (typescript)
-Puedes correr los ejercicios uno a uno manualmente con
-
-```sh
-npm install
-npm start
-```
-
-O ejecutarlos sucesivamenten de forma automática con el script shell
-```sh
-cd ./ejercicio-3
-chmod +x ./run-all.sh
-./run-all.sh
-```
-
 ### Ejercicio 3-1
 * [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/ejercicio-3-1/src/index.ts)
 * OUTPUT
@@ -62,6 +47,21 @@ chmod +x ./run-all.sh
 * [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/ejercicio-3-3/src/index.ts)
 * OUTPUT
 ![screenshot_2023-10-18_00-50-05_991051900](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8abb9ffb-adc1-41a6-ae0c-bdf9d9e17392)
+
+### Como correr el proyecto  (typescript)
+Puedes correr los ejercicios uno a uno manualmente con
+
+```sh
+npm install
+npm start
+```
+
+O ejecutarlos sucesivamenten de forma automática con el script shell
+```sh
+cd ./ejercicio-3
+chmod +x ./run-all.sh
+./run-all.sh
+```
 
 ## Features extra
 * Los comentarios añadidos al ejecicio 3 soportan LSP docstring.
