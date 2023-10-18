@@ -10,7 +10,7 @@ import fetch from "node-fetch";
 // INTERFACES AND ENUMERATIONS
 // ===========================================================================
 
-/** Accepted values as pet status. */
+/** Accepted values for pet status. */
 enum PetStatus {
   Available = "available",
   Pending = "pending",
