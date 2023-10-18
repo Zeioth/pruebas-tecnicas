@@ -1,7 +1,7 @@
 {
   "name": "cypress-template",
   "version": "1.0.6",
-  "description": "ejercicio-2",
+  "description": "Search the word automatización on Google, click wikipedia, and check the year in which the first automated process was created. Then take a screenshot.",
   "main": "index.js",
   "scripts": {
     "start": "cypress open",

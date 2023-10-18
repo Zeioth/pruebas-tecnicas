@@ -2,7 +2,7 @@
   "type": "module",
   "name": "ejercicio-3",
   "version": "1.0.0",
-  "description": "",
+  "description": "Count pets with the same name using a class constructor.",
   "main": "/src/index.js",
   "scripts": {
     "start": "npx tsc && node ./src/index.js"

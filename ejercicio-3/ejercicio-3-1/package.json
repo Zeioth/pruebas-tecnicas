@@ -2,7 +2,7 @@
   "type": "module",
   "name": "ejercicio-3",
   "version": "1.0.0",
-  "description": "",
+  "description": "POST and GET a user to the swagger example API.",
   "main": "/src/index.js",
   "scripts": {
     "start": "npx tsc && node ./src/index.js"

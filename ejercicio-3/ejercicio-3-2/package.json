@@ -2,7 +2,7 @@
   "type": "module",
   "name": "ejercicio-3",
   "version": "1.0.0",
-  "description": "",
+  "description": "GET pets with the state sold and print them in a certain format.",
   "main": "/src/index.js",
   "scripts": {
     "start": "npx tsc && node ./src/index.js"
