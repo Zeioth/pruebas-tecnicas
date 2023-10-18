@@ -76,5 +76,5 @@ definir tu versión de node actual.
 ```
 nvm install v16 && nvm alias default v16 && nvm use v16
 ```
-Por favor considera que la API de swagger es pública y puede que en el momento de correr las peticiones GET de los ejercicios 3-2 y 3-3 no hayan tuplas disponibles. Si esto ocurre, prueba mas tarde.
+Por favor considera que la [API de swagger](https://petstore.swagger.io/) es pública y puede que en el momento de correr las peticiones GET de los ejercicios 3-2 y 3-3 no hayan datos disponibles en el servidor. Si esto ocurre, prueba mas tarde.
 
