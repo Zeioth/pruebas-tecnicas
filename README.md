@@ -37,15 +37,7 @@ Tratamiento de datos en APIS.
 * [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/src/index.ts)
 * OUTPUT
 ![screenshot_2023-10-18_00-49-06_728385744](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/c2c1bd37-82bc-4350-abfa-b6586bbf946b)
-
-### Ejercicio 3-2
-* [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/ejercicio-3-2/src/index.ts)
-* OUTPUT
 ![screenshot_2023-10-18_00-49-47_047298324](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/67d4cce1-ef28-4879-bfb9-371cde28bfb8)
-
-### Ejercicio 3-3
-* [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/ejercicio-3-3/src/index.ts)
-* OUTPUT
 ![screenshot_2023-10-18_00-50-05_991051900](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8abb9ffb-adc1-41a6-ae0c-bdf9d9e17392)
 
 ### Como correr el proyecto  (typescript)
@@ -69,5 +61,4 @@ definir tu versión de node actual.
 ```
 nvm install v16 && nvm alias default v16 && nvm use v16
 ```
-Por favor considera que la [API de swagger](https://petstore.swagger.io/) es pública y puede que en el momento de correr las peticiones GET de los ejercicios 3-2 y 3-3 no hayan datos disponibles en el servidor. Si esto ocurre, prueba mas tarde.
-
+Por favor considera que la [API de swagger](https://petstore.swagger.io/) es pública y puede que en el momento de correr las peticiones GET de los ejercicios 3.2 y 3.3 no hayan datos disponibles en el servidor. Si esto ocurre, prueba mas tarde.
