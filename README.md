@@ -19,7 +19,7 @@ Adicionalmente, he reportado otros 488 bugs en github en diferentes proyectos op
 ## Ejercicio 2
 Automatización de una web.
 
-* [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-2/cypress/cypress/e2e/get-first-automation-date-from-wikipedia.spec.ts)
+* [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-2/cypress/e2e/get-first-automation-date-from-wikipedia.spec.ts)
 * [DEMO EN YOUTUBE](https://www.youtube.com/watch?v=TBSHSvQwmmI)
 
 ### Como correr el proyecto (cypress)
