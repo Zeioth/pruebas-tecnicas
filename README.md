@@ -36,9 +36,8 @@ Tratamiento de datos en APIS.
 ### Ejercicio 3-1
 * [CÓDIGO](https://github.com/Zeioth/pruebas-tecnicas/blob/main/ejercicio-3/src/index.ts)
 * OUTPUT
-![screenshot_2023-10-18_00-49-06_728385744](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/c2c1bd37-82bc-4350-abfa-b6586bbf946b)
-![screenshot_2023-10-18_00-49-47_047298324](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/67d4cce1-ef28-4879-bfb9-371cde28bfb8)
-![screenshot_2023-10-18_00-50-05_991051900](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8abb9ffb-adc1-41a6-ae0c-bdf9d9e17392)
+![screenshot_2024-04-15_01-04-02_255059767](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/307d5af7-1aa0-45cf-ade6-bd21bb42b1a0)
+
 
 ### Como correr el proyecto  (typescript)
 Puedes correr los ejercicios uno a uno manualmente con
