@@ -10,14 +10,14 @@ export class UserController {
    * POST a user and print the server response on screen.
    *
    * @param newUser - A User[] collection.
-   * @returns Type and description of the returned object.
+   * @returns Promise<void>
    *
    * @example
    * ```
    * createUser(User[])
    * ```
    */
-  async createUser(newUser: User[]) {
+  async createUser(newUser: User[]): Promise<void> {
     try {
       // Define the API endpoint URL for creating a user
       const url = "https://petstore.swagger.io/v2/user/createWithArray"
@@ -47,30 +47,28 @@ export class UserController {
    * GET a user and print the server response on screen.
    *
    * @param username - The field username of a user.
-   * @returns response.data
+   * @returns A object with the interface User, or null if the request fails.
    *
    * @example
    * ```
-   * createUser("Alex")
+   * getUser("Alex")
    * ```
    */
-  async getUser(username: string) {
+  async getUser(username: string): Promise<User | null> {
     try {
       const getUserUrl = `https://petstore.swagger.io/v2/user/${username}`
       const response = await fetch(getUserUrl)
 
       if (response.ok) {
-        const data = await response.json()
-        return data
+        const user = await response.json()
+        return user as User
       } else {
-        console.log(
-          "GET USER - Request Failed with Status Code: ",
-          response.status,
-        )
+        console.log("GET USER - Request Failed with Status Code: ", response.status)
         return null
       }
     } catch (error) {
-      console.log(error)
+      console.log("GET USER - Error:", error)
+      return null
     }
   }
 }
