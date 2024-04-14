@@ -25,7 +25,7 @@ Automatización de una web.
 ### Como correr el proyecto (cypress)
 
 ```sh
-cd ./ejercicio-2/cypress/
+cd ./ejercicio-2
 npm install
 npm start
 ```
@@ -54,13 +54,6 @@ Puedes correr los ejercicios uno a uno manualmente con
 ```sh
 npm install
 npm start
-```
-
-O ejecutarlos sucesivamenten de forma automática con el script shell
-```sh
-cd ./ejercicio-3
-chmod +x ./run-all.sh
-./run-all.sh
 ```
 
 ## Features extra
