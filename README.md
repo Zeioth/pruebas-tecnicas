@@ -9,7 +9,7 @@ Prueba exploratoria y reporte de bugs.
 
 Detecté que era posible romper la interfaz de usuario al realizar ciertas acciones, inutilizando el programa hasta ser reiniciado. Mi bug fix fué añadido al proyecto en el pull request [#138](https://github.com/nvim-pack/nvim-spectre/pull/138)
 
-Adicionalmente, he reportado otros 445 bugs en github en diferentes proyectos open source. [Aquí](https://github.com/Zeioth/zeioth-meta) y [aquí](https://github.com/Zeioth) podeis encontrar un breve resume de algunos interesantes.
+Adicionalmente, he reportado otros 488 bugs en github en diferentes proyectos open source. [Aquí](https://github.com/Zeioth/zeioth-meta) y [aquí](https://github.com/Zeioth) podeis encontrar un breve resume de algunos interesantes.
 
 * [DEMO EN YOUTUBE](https://www.youtube.com/watch?v=od9faf7FtOI)
 * SCREENSHOT
