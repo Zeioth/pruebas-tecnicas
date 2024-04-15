@@ -37,6 +37,6 @@ async function main() {
   const pc = new PetController(pets)
   pc.setPetsProp = pets
   const nameCounts: PetsWithSameName = await pc.countPetsWithSameName(pc.getPetsProp);
-  console.log("Pet Name Counts:", nameCounts);
+  console.log(nameCounts);
 }
 main();
