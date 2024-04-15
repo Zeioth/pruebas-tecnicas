@@ -33,8 +33,8 @@ export class PetController {
   /**
    * GET and return a list of pets.
    *
-   * @param PetStatus - a value of the PetStatus enum.
-   * @returns a list of pets.
+   * @param PetStatus - A value of the PetStatus enum.
+   * @returns An array of objects with the interface Pet.
    *
    * @example
    * ```
@@ -65,7 +65,7 @@ export class PetController {
   /**
    * Count pets with the same name and return the result as an object.
    *
-   * @returns A list of key pairs like formed by { name: count }
+   * @returns A object with the interface PetsWithSameName.
    *
    * @example
    * ```
@@ -75,7 +75,8 @@ export class PetController {
   async countPetsWithSameName(pets: Pet[]): Promise<PetsWithSameName> {
     const nameCounts: PetsWithSameName = {};
     pets.forEach((pet) => {
-      const petName = pet.name;
+      const petName = "'" + pet.name.toLowerCase + "'";
+      console.log(pet.name)
       if (nameCounts[petName]) {
         // For each pet, if its name exists in nameCounts, increase its counter.
         nameCounts[petName]++;
