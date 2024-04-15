@@ -75,7 +75,7 @@ export class PetController {
   async countPetsWithSameName(pets: Pet[]): Promise<PetsWithSameName> {
     const nameCounts: PetsWithSameName = {};
     pets.forEach((pet) => {
-      const petName = "'" + pet.name.toLowerCase + "'";
+      const petName = "'" + pet.name.toLowerCase() + "'";
       console.log(pet.name)
       if (nameCounts[petName]) {
         // For each pet, if its name exists in nameCounts, increase its counter.
