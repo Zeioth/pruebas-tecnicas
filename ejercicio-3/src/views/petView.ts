@@ -6,7 +6,7 @@ export class PetView {
   /**
    * Print a list of pets with the format {id: number, name: string}.
    *
-   * @param Pet[] - a list of pets.
+   * @param Pet[] - An array of pets.
    * @returns Promise<void>
    *
    * @example

@@ -7,14 +7,23 @@ import { User } from '../interfaces/IUser.js'
 /** Class to manage the 'user' entpoint. */
 export class UserController {
   /**
-   * POST a user and print the server response on screen.
+   * POST one or many users.
    *
    * @param newUser - A User[] collection.
    * @returns Promise<void>
    *
    * @example
    * ```
-   * createUser(User[])
+   * userController.createUser([{
+   *   id: 0,
+   *   username: "",
+   *   firstName: "",
+   *   lastName: "",
+   *   email: "",
+   *   password: "",
+   *   phone: "",
+   *   userStatus: 0
+   * }], ...)
    * ```
    */
   async createUser(newUser: User[]): Promise<void> {
@@ -44,14 +53,14 @@ export class UserController {
   }
 
   /**
-   * GET a user and print the server response on screen.
+   * GET a user.
    *
    * @param username - The field username of a user.
    * @returns A object with the interface User, or null if the request fails.
    *
    * @example
    * ```
-   * getUser("Alex")
+   * const user = userController.getUser("Alex")
    * ```
    */
   async getUser(username: string): Promise<User | null> {
@@ -60,8 +69,8 @@ export class UserController {
       const response = await fetch(getUserUrl)
 
       if (response.ok) {
-        const user = await response.json()
-        return user as User
+        const user = (await response.json()) as User
+        return user
       } else {
         console.log("GET USER - Request Failed with Status Code: ", response.status)
         return null
