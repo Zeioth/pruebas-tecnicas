@@ -33,7 +33,7 @@ async function main() {
    *       - Any extra adition to the code will be evaluated. */
   console.log("\nOUTPUT OF ASSIGNMENT 3.3")
   console.log("=========================================")
-  // Here we are forced to use a constructor, so it's cleaner to call 'get/set'.
+  // Here we are forced to use a constructor, so it's cleaner to use 'get/set'.
   const pc = new PetController(pets)
   pc.setPetsProp = pets
   const nameCounts: PetsWithSameName = await pc.countPetsWithSameName(pc.getPetsProp);
