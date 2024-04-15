@@ -65,6 +65,12 @@ export class PetController {
   /**
    * Count pets with the same name and return the result as an object.
    *
+   * Please note this function will return the names in lowercase.
+   * This is necessary so we can count them reliably.
+   *
+   * Also note that javascript automatically takes care of converting
+   * all indexes to string, so it's safe to use the pet names we get as index.
+   *
    * @returns A object with the interface PetsWithSameName.
    *
    * @example
@@ -75,7 +81,7 @@ export class PetController {
   async countPetsWithSameName(pets: Pet[]): Promise<PetsWithSameName> {
     const nameCounts: PetsWithSameName = {};
     pets.forEach((pet) => {
-      const petName = "'" + pet.name.toLowerCase() + "'";
+      const petName = pet.name.toLowerCase();
       if (nameCounts[petName]) {
         // For each pet, if its name exists in nameCounts, increase its counter.
         nameCounts[petName]++;
