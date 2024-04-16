@@ -1,7 +1,6 @@
-// TODO: Please note we are using console.log() only as example. In production
+// TODO: Please note we are using console.error() only as example. In production
 //       we must use an actual logging library so we can monitor properly.
-
-import fetch from 'node-fetch'
+import axios from 'axios'
 import { User } from '../interfaces/IUser.js'
 
 /** Class to manage the 'user' entpoint. */
@@ -10,7 +9,8 @@ export class UserController {
    * POST one or many users.
    *
    * @param newUser - A User[] collection.
-   * @returns Promise<void>
+   * @returns number if the status code, if the request is successful.
+   *          null if there is a error.
    *
    * @example
    * ```
@@ -26,29 +26,14 @@ export class UserController {
    * }], ...)
    * ```
    */
-  async createUser(newUser: User[]): Promise<void> {
+  async createUsers(newUser: User[]): Promise<number | null> {
+    const url = 'https://petstore.swagger.io/v2/user/createWithArray'
     try {
-      // Define the API endpoint URL for creating a user
-      const url = "https://petstore.swagger.io/v2/user/createWithArray"
-
-      // Define the request options for creating a user, including the API key
-      const createUserOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          api_key: "special-key",
-        },
-        body: JSON.stringify(newUser),
-      }
-
-      // Make the POST request to create the user using node-fetch
-      const response = await fetch(url, createUserOptions)
-
-      if (!response.ok) {
-        console.log("POST NEW USER - ERROR with status code:", response.status)
-      }
+      const response = await axios.post(url, newUser)
+      return response.status
     } catch (error) {
-      console.log(error)
+      console.error('Error:', error)
+      return null
     }
   }
 
@@ -56,7 +41,8 @@ export class UserController {
    * GET a user.
    *
    * @param username - The field username of a user.
-   * @returns A object with the interface User, or null if the request fails.
+   * @returns User if the request is successful.
+   *          null if there is a error.
    *
    * @example
    * ```
@@ -64,19 +50,12 @@ export class UserController {
    * ```
    */
   async getUser(username: string): Promise<User | null> {
+    const url = `https://petstore.swagger.io/v2/user/${username}`
     try {
-      const getUserUrl = `https://petstore.swagger.io/v2/user/${username}`
-      const response = await fetch(getUserUrl)
-
-      if (response.ok) {
-        const user = (await response.json()) as User
-        return user
-      } else {
-        console.log("GET USER - Request Failed with Status Code: ", response.status)
-        return null
-      }
+      const response = await axios.get(url)
+      return response.data as User
     } catch (error) {
-      console.log("GET USER - Error:", error)
+      console.error('Error:', error)
       return null
     }
   }

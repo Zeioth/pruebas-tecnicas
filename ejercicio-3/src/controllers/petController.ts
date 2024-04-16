@@ -1,7 +1,7 @@
-// TODO: Please note we are using console.log() only as example. In production
+// TODO: Please note we are using console.error() only as example. In production
 //       we must use an actual logging library so we can monitor properly.
 
-import fetch from 'node-fetch'
+import axios from 'axios'
 import { Pet, PetStatus, PetsWithSameName } from '../interfaces/IPet.js'
 
 /**
@@ -34,31 +34,22 @@ export class PetController {
    * GET and return a list of pets.
    *
    * @param PetStatus - A value of the PetStatus enum.
-   * @returns An array of objects with the interface Pet.
+   * @returns Pet[] if the request is successful.
+   *          null if there is a error.
    *
    * @example
    * ```
    * getPets(PetStatus.Sold);
    * ```
    */
-  async getPets(status: PetStatus): Promise<Pet[]> {
+  async getPets(status: PetStatus): Promise<Pet[]|null> {
+    const url = `https://petstore.swagger.io/v2/pet/findByStatus?status=${status}`
     try {
-      const getUserUrl = `https://petstore.swagger.io/v2/pet/findByStatus?status=${status}`;
-      const response = await fetch(getUserUrl);
-
-      if (response.ok) {
-        const data: Pet[] = (await response.json()) as Pet[];
-        return data;
-      } else {
-        console.error(
-          "GET PETS Request Failed with Status Code:",
-          response.status,
-        );
-        throw new Error("GET PETS Request Failed");
-      }
+      const response = await axios.get(url)
+      return response.data as Pet[]
     } catch (error) {
-      console.error("An error occurred:", error);
-      throw error;
+      console.error('Error:', error)
+      return null
     }
   }
 
@@ -71,7 +62,7 @@ export class PetController {
    * Also note that javascript automatically takes care of converting
    * all indexes to string, so it's safe to use the pet names we get as index.
    *
-   * @returns A object with the interface PetsWithSameName.
+   * @returns PetsWithSameName.
    *
    * @example
    * ```
