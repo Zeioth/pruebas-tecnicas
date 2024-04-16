@@ -1,7 +1,7 @@
 // TODO: Please note we are using console.error() only as example. In production
 //       we must use an actual logging library so we can monitor properly.
 import axios from 'axios'
-import { User } from '../interfaces/IUser.js'
+import { User } from '../interfaces/IUser'
 
 /** Class to manage the 'user' entpoint. */
 export class UserController {

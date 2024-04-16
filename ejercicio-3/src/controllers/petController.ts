@@ -2,7 +2,7 @@
 //       we must use an actual logging library so we can monitor properly.
 
 import axios from 'axios'
-import { Pet, PetStatus, PetsWithSameName } from '../interfaces/IPet.js'
+import { Pet, PetStatus, PetsWithSameName } from '../interfaces/IPet'
 
 /**
  * Class to manage the 'pet' entpoint.

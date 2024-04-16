@@ -1,4 +1,4 @@
-import { Pet } from '../interfaces/IPet.js'
+import { Pet } from '../interfaces/IPet'
 
 /** Mock of the data Pets[] returned by petController.getPets()
  *
