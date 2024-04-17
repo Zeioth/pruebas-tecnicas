@@ -62,7 +62,7 @@ npm test
 
 * Los errores son logueados usando sistema de logging [pino](https://github.com/pinojs/pino).
 
-![screenshot_2024-04-17_21-38-14_834126988](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/46a2f7b6-27db-4557-a969-8e18e919e4ed)
+![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
 
 ## Troubleshooting
 Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
