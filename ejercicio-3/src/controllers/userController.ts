@@ -1,7 +1,5 @@
-// TODO: Please note we are using console.error() only as example. In production
-//       we must use an actual logging library so we can monitor properly.
-
 import axios from 'axios'
+import logger from '../services/logger.service'
 import { User } from '../interfaces/IUser'
 
 /** Class to manage the 'user' entpoint. */
@@ -33,7 +31,7 @@ export class UserController {
       const response = await axios.post(url, newUser)
       return response.status
     } catch (error) {
-      console.error('Error:', error)
+      logger.error(error)
       return null
     }
   }
@@ -53,10 +51,11 @@ export class UserController {
   async getUser(username: string): Promise<User | null> {
     const url = `https://petstore.swagger.io/v2/user/${username}`
     try {
+      logger.error("TEST!")
       const response = await axios.get(url)
       return response.data as User
     } catch (error) {
-      console.error('Error:', error)
+      logger.error(error)
       return null
     }
   }

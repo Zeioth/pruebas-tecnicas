@@ -1,7 +1,5 @@
-// TODO: Please note we are using console.error() only as example. In production
-//       we must use an actual logging library so we can monitor properly.
-
 import axios from 'axios'
+import logger from '../services/logger.service'
 import { Pet, PetStatus, PetsWithSameName } from '../interfaces/IPet'
 
 /**
@@ -48,7 +46,7 @@ export class PetController {
       const response = await axios.get(url)
       return response.data as Pet[]
     } catch (error) {
-      console.error('Error:', error)
+      logger.error(error)
       return null
     }
   }
