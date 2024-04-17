@@ -11,13 +11,13 @@ export class PetView {
    *
    * @example
    * ```
-   * petView.printPets(pets);
+   * petView.printPets(pets)
    * ```
    */
   async printPets(pets: Pet[]): Promise<void> {
     pets.forEach((pet) => {
       console.log(`{${pet.id}, "${pet.name}" }`)
-    });
+    })
   }
 }
 

@@ -29,5 +29,4 @@ describe('petController', () => {
     expect(petsWithSameName).not.toBeNull
     expect(petsWithSameName).toMatchObject<PetsWithSameName[]>
   })
-
 })
