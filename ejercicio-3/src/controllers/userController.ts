@@ -51,7 +51,6 @@ export class UserController {
   async getUser(username: string): Promise<User | null> {
     const url = `https://petstore.swagger.io/v2/user/${username}`
     try {
-      logger.error("TEST!")
       const response = await axios.get(url)
       return response.data as User
     } catch (error) {
