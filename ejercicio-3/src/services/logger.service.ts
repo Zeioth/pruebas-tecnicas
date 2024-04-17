@@ -6,7 +6,9 @@ import fs from 'fs'
 class LoggerService {
   private readonly logsDir: string = 'logs'
   private readonly logFileName: string = 'logfile.log'
-  private readonly logFilePath: string = path.join(this.logsDir, this.logFileName)
+  private readonly logFilePath: string = path.join(
+    this.logsDir, this.logFileName
+  )
   private readonly stream: fs.WriteStream
 
   /** Default constructor.
@@ -15,7 +17,7 @@ class LoggerService {
     fs.mkdirSync(this.logsDir, { recursive: true })
     this.stream = fs.createWriteStream(
       this.logFilePath,
-      { flags: 'a' } // 'a' for 'append' instead of re-creating the log per session.
+      { flags: 'a' } // 'append' instead of re-creating the log per session.
     )
   }
 
@@ -37,10 +39,13 @@ class LoggerService {
         const dateString: string = date.toLocaleDateString(
           locale, { day: '2-digit', month: '2-digit', year: 'numeric' }
         )
-        const timeString: string = date.toLocaleTimeString(locale, { hour12: false })
+        const timeString: string = date.toLocaleTimeString(
+          locale, { hour12: false }
+        )
 
         // Join 'date' and 'time' into the final 'timestamp' and return it.
-        const timestamp: string = `,"timestamp":"${dateString} at ${timeString}"`
+        const timestamp: string =
+          `,"timestamp":"${dateString} at ${timeString}"`
         return timestamp
       },
     }
