@@ -73,8 +73,6 @@ npm test
 }
 ```
 * Se ha creado una acción GitHub de integración continua para requerir que `npm test` tenga que pasar correctamente antes de permitir que un pull request se integre en la rama `main`. Ver [acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
-![screenshot_2024-04-18_00-37-18_014223990](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/02d2c242-97cf-4b54-a414-9c1dcc3c24ef)
-![screenshot_2024-04-18_00-38-00_093713933](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/3099b07f-0410-4a23-8819-f4ecad87370c)
 ![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
 
 ## Troubleshooting
