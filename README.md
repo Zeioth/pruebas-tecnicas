@@ -61,11 +61,11 @@ npm test
 ![screenshot_2023-10-18_00-11-34_742000737](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/07fe4dcf-bda1-4925-a3ea-58c55a228743)
 
 ## Troubleshooting
-Los programas de este repositorio han sido testeados con la versión `v16.20.2` de node.
+Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
 Si encuentras algún problema al ejecutarlos, puedes usar el comando `nvm` para
 definir tu versión de node actual.
 
 ```
-nvm install v16 && nvm alias default v16 && nvm use v16
+nvm install v20 && nvm alias default v20 && nvm use v20
 ```
 Por favor considera que la [API de swagger](https://petstore.swagger.io/) es pública y puede que en el momento de correr las peticiones GET de los ejercicios 3.2 y 3.3 no hayan datos disponibles en el servidor. Si esto ocurre, prueba mas tarde.
