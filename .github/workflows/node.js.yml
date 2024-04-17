@@ -21,11 +21,11 @@ jobs:
     - name: Change directory to ejercicio-3
       run: cd ejercicio-3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-      working-directory: ejercicio-3  # Specify the working directory for setup-node
+      run: |
+        cd ejercicio-3
+        actions/setup-node@v3
+      env:
+        NODE_VERSION: ${{ matrix.node-version }}
     - name: Npm install and test
       working-directory: ejercicio-3  # Specify the working directory for npm commands
       run: |
