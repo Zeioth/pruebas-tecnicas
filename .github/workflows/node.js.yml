@@ -22,4 +22,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - run: npm test
+    - name: Npm install and test
+      working-directory: ejercicio-3
+      run: npm install && npm test
