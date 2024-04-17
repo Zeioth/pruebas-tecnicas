@@ -27,7 +27,7 @@ async function main() {
   if (pets) {
     petView.printPets(pets)
   } else {
-    return
+    process.exit(1)
   }
 
   /** 3.3 Create a class which constructor requires of the former data structure
