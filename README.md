@@ -60,11 +60,11 @@ npm test
 
 ![screenshot_2023-10-18_00-11-34_742000737](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/07fe4dcf-bda1-4925-a3ea-58c55a228743)
 
-* Los errores son logueados usando sistema de logging [pino](https://github.com/pinojs/pino).
+* Ahoa los errores son logueados usando sistema de logging [pino](https://github.com/pinojs/pino).
 
 ![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
 
-* Usamos Husky para que los tests corran localmente de forma automatica antes de hacer push. (En nuestro caso no lo va a hacer, porque el repositorio es multi-proyecto).
+* Ahora usamos Husky para que los tests corran localmente de forma automatica antes de hacer push. (En nuestro caso no lo va a hacer, porque el repositorio es multi-proyecto).
 ```json
 "husky": {
   "hooks": {
