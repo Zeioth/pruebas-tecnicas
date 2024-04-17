@@ -7,7 +7,9 @@ Prueba exploratoria y reporte de bugs.
 
 [Spectre.nvim](https://github.com/nvim-pack/nvim-spectre): Bug report [#133](https://github.com/nvim-pack/nvim-spectre/issues/133) de este plugin de "buscar y reemplazar" para el editor de texto neovim. 
 
-Detecté que era posible romper la interfaz de usuario al realizar ciertas acciones, inutilizando el programa hasta ser reiniciado. Mi bug fix fué añadido al proyecto en el pull request [#138](https://github.com/nvim-pack/nvim-spectre/pull/138)
+Detecté que era posible romper la interfaz de usuario al realizar ciertas acciones, inutilizand
+    Se ha creado una acción GitHub de integración continua para requerir que npm test tenga que pasar correctamente antes de permitir que un pull request se integre en la rama main. Ver acciones. screenshot_2024-04-18_00-39-23_494334458
+o el programa hasta ser reiniciado. Mi bug fix fué añadido al proyecto en el pull request [#138](https://github.com/nvim-pack/nvim-spectre/pull/138)
 
 Adicionalmente, he reportado otros 488 bugs en github en diferentes proyectos open source. [Aquí](https://github.com/Zeioth/zeioth-meta) y [aquí](https://github.com/Zeioth) podeis encontrar un breve resume de algunos interesantes.
 
@@ -60,12 +62,25 @@ npm test
 
 ![screenshot_2023-10-18_00-11-34_742000737](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/07fe4dcf-bda1-4925-a3ea-58c55a228743)
 
-* Los errores son logueados usando sistema de logging [pino](https://github.com/pinojs/pino).
+* Ahora los errores son logueados usando el sistema de logging [pino](https://github.com/pinojs/pino), para lo cual hemos creado un servicio singleton.
 
 ![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
 
+* Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. [Está disponible en acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
+![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
+
+* Ademas usamos Husky para que los tests corran localmente de forma automatica al hacer push. Esto no impide el push, pero informa al desarrollador en caso de regresión al publicar cambios en su rama.
+```json
+"husky": {
+  "hooks": {
+    "pre-push": "npm test"
+  }
+}
+```
+
+
 ## Troubleshooting
-Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
+Los programas de este repositorio han sido testeados con las versiones `v20.12.2` de node.
 Si encuentras algún problema al ejecutarlos, puedes usar el comando `nvm` para
 definir tu versión de node actual.
 
