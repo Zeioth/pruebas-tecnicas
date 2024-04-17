@@ -35,7 +35,7 @@ export class PetController {
    *
    * @param PetStatus - A value of the PetStatus enum.
    * @returns Pet[] if the request is successful.
-   *          null if there is a error.
+   *          null if there is an error (it will be logged).
    *
    * @example
    * ```

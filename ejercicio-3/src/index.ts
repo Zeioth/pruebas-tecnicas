@@ -23,8 +23,12 @@ async function main() {
    *       - You can use any data structure. */
   console.log("\nOUTPUT OF ASSIGNMENT 3.2")
   console.log("=========================================")
-  const pets = await petController.getPets(PetStatus.Sold)
-  if (pets) { petView.printPets(pets) }
+  const pets:Pet[]|null = await petController.getPets(PetStatus.Sold)
+  if (pets) {
+    petView.printPets(pets)
+  } else {
+    return
+  }
 
   /** 3.3 Create a class which constructor requires of the former data structure
    *      and implement a method that can go through it and identify pets
@@ -34,11 +38,9 @@ async function main() {
   console.log("\nOUTPUT OF ASSIGNMENT 3.3")
   console.log("=========================================")
   // Here we are forced to use a constructor, so it's cleaner to use 'get/set'.
-  if (pets) {
-    const pc = new PetController(pets)
-    pc.setPetsProp = pets
-    const nameCounts: PetsWithSameName = await pc.countPetsWithSameName(pc.getPetsProp)
-    console.log(nameCounts)
-  }
+  const pc: PetController = new PetController(pets)
+  pc.setPetsProp = pets
+  const pwsm: PetsWithSameName = await pc.countPetsWithSameName(pc.getPetsProp)
+  console.log(pwsm)
 }
 main()

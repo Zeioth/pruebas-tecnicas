@@ -10,7 +10,7 @@ export class UserController {
    *
    * @param newUser - A User[] collection.
    * @returns number if the status code, if the request is successful.
-   *          null if there is a error.
+   *          null if there is an error (it will be logged).
    *
    * @example
    * ```
@@ -42,7 +42,7 @@ export class UserController {
    *
    * @param username - The field username of a user.
    * @returns User if the request is successful.
-   *          null if there is a error.
+   *          null if there is an error (it will be logged).
    *
    * @example
    * ```
