@@ -2,7 +2,7 @@ import pino, { LoggerOptions } from 'pino'
 import path from 'path'
 import fs from 'fs'
 
-/** Class to manage the Logger. */
+/** Class to manage the logger. */
 class LoggerService {
   private readonly logsDir: string = 'logs'
   private readonly logFileName: string = 'logfile.log'
