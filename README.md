@@ -66,7 +66,7 @@ npm test
 
 ![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
 
-* Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. Ver [acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
+* Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. [Está disponible en acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
 ![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
 
 * Ademas usamos Husky para que los tests corran localmente de forma automatica al hacer push. Esto no impide el push, pero informa al desarrollador en caso de regresión al publicar cambios en su rama.
