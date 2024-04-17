@@ -6,7 +6,7 @@ const logsDir = 'logs'
 const logFileName = 'logfile.log'
 const logFilePath = path.join(logsDir, logFileName)
 
-// ensure logDir is created
+// ensure logsDir is created
 fs.mkdirSync(logsDir, { recursive: true })
 
 // define the log format
