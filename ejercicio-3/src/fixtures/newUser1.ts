@@ -19,4 +19,4 @@ export const newUser1: User[] = [
     phone: "",
     userStatus: 0,
   },
-];
+]

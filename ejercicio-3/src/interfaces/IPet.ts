@@ -9,16 +9,16 @@ export enum PetStatus {
 
 /** Interface of a pet object. */
 export interface Pet {
-  id: number;
-  category: string;
-  name: string;
-  photoUrls: [];
-  tags: [];
-  status: string;
+  id: number
+  category: string
+  name: string
+  photoUrls: []
+  tags: []
+  status: string
 }
 
 /** Interface returned by the method `PetController.countPetsWithSameName()`. */
 export interface PetsWithSameName {
-  [name: string]: number;
+  [name: string]: number
 }
 

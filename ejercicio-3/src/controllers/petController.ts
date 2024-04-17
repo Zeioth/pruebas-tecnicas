@@ -10,24 +10,24 @@ import { Pet, PetStatus, PetsWithSameName } from '../interfaces/IPet'
  * @constructor PetController(Pet[])
  */
 export class PetController {
-  private pets: Pet[];
+  private pets: Pet[]
 
   /** This constructor initializes the state of the object through the member
    * 'pets'. */
   constructor(pets: Pet[]) {
-    this.pets = pets;
+    this.pets = pets
   }
 
   /** Get accessor of the 'pets' property,
    * which contains the state returned by the getPets() method. */
   get getPetsProp(): Pet[] {
-    return this.pets;
+    return this.pets
   }
 
   /** Set accessor of the 'pets' property,
    *  which stores the state returned by the getPets() method. */
   set setPetsProp(value: Pet[]) {
-    this.pets = value;
+    this.pets = value
   }
 
   /**
@@ -39,10 +39,10 @@ export class PetController {
    *
    * @example
    * ```
-   * getPets(PetStatus.Sold);
+   * getPets(PetStatus.Sold)
    * ```
    */
-  async getPets(status: PetStatus): Promise<Pet[]|null> {
+  async getPets(status: PetStatus): Promise<Pet[] | null> {
     const url = `https://petstore.swagger.io/v2/pet/findByStatus?status=${status}`
     try {
       const response = await axios.get(url)
@@ -66,22 +66,23 @@ export class PetController {
    *
    * @example
    * ```
-   * const nameCounts = petController.countPetsWithSameName();
+   * const nameCounts = petController.countPetsWithSameName()
    * ```
    */
   async countPetsWithSameName(pets: Pet[]): Promise<PetsWithSameName> {
-    const nameCounts: PetsWithSameName = {};
+    const nameCounts: PetsWithSameName = {}
+
     pets.forEach((pet) => {
-      const petName = pet.name.toLowerCase();
-      if (nameCounts[petName]) {
+      pet.name.toLowerCase()
+      if (nameCounts[pet.name]) {
         // For each pet, if its name exists in nameCounts, increase its counter.
-        nameCounts[petName]++;
+        nameCounts[pet.name]++
       } else {
         // Otherwise, create a counter for the new pet name.
-        nameCounts[petName] = 1;
+        nameCounts[pet.name] = 1
       }
-    });
-    return nameCounts;
+    })
+    return nameCounts
   }
 }
 
