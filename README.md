@@ -40,12 +40,20 @@ Tratamiento de datos en APIS.
 
 
 ### Como correr el proyecto  (typescript)
-Puedes correr los ejercicios uno a uno manualmente con
+Puedes correr los ejercicios con
 
 ```sh
 npm install
 npm start
 ```
+
+### Tests unitarios
+Puedes correrlos con
+
+```sh
+npm test
+```
+![screenshot_2024-04-17_02-40-19_845296640](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/bb9ec063-7e54-4c30-ab2a-28bc8083f227)
 
 ## Features extra
 * Los comentarios añadidos al ejecicio 3 soportan LSP docstring.
