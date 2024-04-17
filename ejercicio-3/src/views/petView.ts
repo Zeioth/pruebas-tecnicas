@@ -21,5 +21,5 @@ export class PetView {
   }
 }
 
-/** Singleton of the class PetView.*/
+/** Singleton of the class PetView. */
 export const petView = new PetView()

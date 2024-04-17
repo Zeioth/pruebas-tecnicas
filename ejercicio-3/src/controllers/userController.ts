@@ -60,5 +60,5 @@ export class UserController {
   }
 }
 
-/** Singleton of the class UserController.*/
+/** Singleton of the class UserController. */
 export const userController = new UserController()

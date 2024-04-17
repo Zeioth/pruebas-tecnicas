@@ -89,5 +89,5 @@ export class PetController {
   }
 }
 
-/** Singleton of the class PetController.*/
+/** Singleton of the class PetController. */
 export const petController = new PetController([])
