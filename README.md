@@ -60,6 +60,10 @@ npm test
 
 ![screenshot_2023-10-18_00-11-34_742000737](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/07fe4dcf-bda1-4925-a3ea-58c55a228743)
 
+* Logging system
+
+![screenshot_2024-04-17_21-38-14_834126988](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/46a2f7b6-27db-4557-a969-8e18e919e4ed)
+
 ## Troubleshooting
 Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
 Si encuentras algún problema al ejecutarlos, puedes usar el comando `nvm` para
