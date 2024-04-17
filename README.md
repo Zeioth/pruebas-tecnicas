@@ -64,6 +64,17 @@ npm test
 
 ![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
 
+* Usamos Husky para que los tests corran localmente de forma automatica antes de hacer push. (En nuestro caso no lo va a hacer, porque el repositorio es multi-proyecto).
+```json
+"husky": {
+  "hooks": {
+    "pre-push": "npm test"
+  }
+}
+```
+* Se ha creado una acción GitHub de integración continua para requerir que `npm test` tenga que pasar correctamente antes de permitir que un pull request se integre en la rama `main`. Ver [acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
+![screenshot_2024-04-18_00-25-47_837658788](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/637d48cf-3ca6-4069-842d-66725fceb55a)
+
 ## Troubleshooting
 Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
 Si encuentras algún problema al ejecutarlos, puedes usar el comando `nvm` para
