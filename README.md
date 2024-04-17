@@ -7,7 +7,9 @@ Prueba exploratoria y reporte de bugs.
 
 [Spectre.nvim](https://github.com/nvim-pack/nvim-spectre): Bug report [#133](https://github.com/nvim-pack/nvim-spectre/issues/133) de este plugin de "buscar y reemplazar" para el editor de texto neovim. 
 
-Detecté que era posible romper la interfaz de usuario al realizar ciertas acciones, inutilizando el programa hasta ser reiniciado. Mi bug fix fué añadido al proyecto en el pull request [#138](https://github.com/nvim-pack/nvim-spectre/pull/138)
+Detecté que era posible romper la interfaz de usuario al realizar ciertas acciones, inutilizand
+    Se ha creado una acción GitHub de integración continua para requerir que npm test tenga que pasar correctamente antes de permitir que un pull request se integre en la rama main. Ver acciones. screenshot_2024-04-18_00-39-23_494334458
+o el programa hasta ser reiniciado. Mi bug fix fué añadido al proyecto en el pull request [#138](https://github.com/nvim-pack/nvim-spectre/pull/138)
 
 Adicionalmente, he reportado otros 488 bugs en github en diferentes proyectos open source. [Aquí](https://github.com/Zeioth/zeioth-meta) y [aquí](https://github.com/Zeioth) podeis encontrar un breve resume de algunos interesantes.
 
@@ -64,7 +66,10 @@ npm test
 
 ![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
 
-* Ahora usamos Husky para que los tests corran localmente de forma automatica antes de hacer push. (En nuestro caso no lo va a hacer, porque el repositorio es multi-proyecto).
+* Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. Ver [acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
+![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
+
+* Ademas usamos Husky para que los tests corran localmente de forma automatica al hacer push. Esto no impide el push, pero informa al desarrollador en caso de regresión al publicar cambios en su rama.
 ```json
 "husky": {
   "hooks": {
@@ -72,8 +77,7 @@ npm test
   }
 }
 ```
-* Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. Ver [acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
-![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
+
 
 ## Troubleshooting
 Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
