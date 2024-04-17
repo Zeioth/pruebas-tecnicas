@@ -80,7 +80,7 @@ npm test
 
 
 ## Troubleshooting
-Los programas de este repositorio han sido testeados con las versiones `v16.20.2` y `v20.12.2` de node.
+Los programas de este repositorio han sido testeados con las versiones `v20.12.2` de node.
 Si encuentras algún problema al ejecutarlos, puedes usar el comando `nvm` para
 definir tu versión de node actual.
 
