@@ -27,3 +27,6 @@ jobs:
     - name: NPM test
       working-directory: ejercicio-3
       run: npm test
+    - name: NPM run
+      working-directory: ejercicio-3
+      run: npm run
