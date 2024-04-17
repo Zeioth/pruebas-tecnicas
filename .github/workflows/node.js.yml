@@ -26,5 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Npm test
-      run: npm test
+    - name: Npm install and test
+      working-directory: ejercicio-3  # Specify the working directory for npm commands
+      run: |
+        npm install
+        npm test
