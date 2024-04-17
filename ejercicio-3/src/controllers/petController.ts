@@ -73,13 +73,15 @@ export class PetController {
     const nameCounts: PetsWithSameName = {}
 
     pets.forEach((pet) => {
-      pet.name.toLowerCase()
-      if (nameCounts[pet.name]) {
-        // For each pet, if its name exists in nameCounts, increase its counter.
-        nameCounts[pet.name]++
-      } else {
-        // Otherwise, create a counter for the new pet name.
-        nameCounts[pet.name] = 1
+      if (pet.name) {
+        pet.name.toLowerCase()
+        if (nameCounts[pet.name]) {
+          // For each pet, if its name exists in nameCounts, increase its counter.
+          nameCounts[pet.name]++
+        } else {
+          // Otherwise, create a counter for the new pet name.
+          nameCounts[pet.name] = 1
+        }
       }
     })
     return nameCounts
