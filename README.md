@@ -40,11 +40,18 @@ Tratamiento de datos en APIS.
 
 
 ### Como correr el proyecto  (typescript)
-Puedes correr los ejercicios uno a uno manualmente con
+Puedes correr los ejercicios con
 
 ```sh
 npm install
 npm start
+```
+
+### Tests unitarios
+Puedes correrlos con
+
+```sh
+npm test
 ```
 
 ## Features extra
