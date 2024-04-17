@@ -2,6 +2,5 @@
 **/coverage
 **/dist
 **/node_modules
-**/package-lock.json
 **/index.js
 **/ejercicio-2/cypress/screenshots
