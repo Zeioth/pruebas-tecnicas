@@ -25,7 +25,7 @@ describe('logger', () => {
       { "level": "ERROR", "msg": "THIS IS A UNIT TEST." },
     ]
     let logContent: string | null = null
-    let logLines: string[] | null = null
+    let logContentLines: string[] | null = null
     let last3LinesAsJson: LogLine[] | null = null
 
     // act → log
@@ -35,7 +35,7 @@ describe('logger', () => {
 
     // assert → 'expectedLogs' are the latest lines written in the logs file
     logContent = fs.readFileSync(logFilePath, 'utf8')
-    logLines = logContent.trim().split('\n')
+    logContentLines = logContent.trim().split('\n')
     last3LinesAsJson = logLines.slice(-3).map((line: string) => JSON.parse(line))
     last3LinesAsJson.forEach((line: LogLine, index: number) => {
       expect(line.level).toBe(expectedLogs[index].level)
