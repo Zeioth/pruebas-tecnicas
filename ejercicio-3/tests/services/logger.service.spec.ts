@@ -36,7 +36,7 @@ describe('logger', () => {
     // assert → 'expectedLogs' are the latest lines written in the logs file
     logContent = fs.readFileSync(logFilePath, 'utf8')
     logContentLines = logContent.trim().split('\n')
-    last3LinesAsJson = logLines.slice(-3).map((line: string) => JSON.parse(line))
+    last3LinesAsJson = logContentLines.slice(-3).map((line: string) => JSON.parse(line))
     last3LinesAsJson.forEach((line: LogLine, index: number) => {
       expect(line.level).toBe(expectedLogs[index].level)
       expect(line.msg).toBe(expectedLogs[index].msg)
