@@ -4,7 +4,7 @@ import { User } from '@interfaces/IUser'
 import { userController } from '@controllers/userController'
 import { newUser1 } from '@fixtures/newUser1'
 
-describe('UserController', () => {
+describe('userController', () => {
   it('should POST user(s) by calling createUsers() and expect a OK status code.', async () => {
     // arrange
     let status = null
