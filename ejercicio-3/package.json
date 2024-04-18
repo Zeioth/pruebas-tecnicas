@@ -6,7 +6,7 @@
   "main": "./src/index.ts",
   "scripts": {
     "start": "npx tsc && npx tsc-alias && node ./dist/src/index.js",
-    "test": "jest"
+    "test": "npx tsc && npx tsc-alias && jest"
   },
   "keywords": [],
   "author": "Jose Adrian Lopez Nuñez",
