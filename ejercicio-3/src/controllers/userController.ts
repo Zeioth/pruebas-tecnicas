@@ -1,6 +1,6 @@
 import axios from 'axios'
-import logger from '../services/logger.service'
-import { User } from '../interfaces/IUser'
+import logger from '@services/logger.service'
+import { User } from '@interfaces/IUser'
 
 /** Class to manage the 'user' entpoint. */
 export class UserController {

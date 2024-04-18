@@ -1,4 +1,4 @@
-import { Pet } from '../interfaces/IPet'
+import { Pet } from '@interfaces/IPet'
 
 
 /** Class to print 'pet' data on console. */

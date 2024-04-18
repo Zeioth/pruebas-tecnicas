@@ -1,9 +1,9 @@
-import { newUser1 } from './fixtures/newUser1'
-import { userController } from './controllers/userController'
+import { newUser1 } from '@fixtures/newUser1'
+import { userController } from '@controllers/userController'
 
-import { Pet, PetStatus, PetsWithSameName } from './interfaces/IPet'
-import { petController, PetController } from './controllers/petController'
-import { petView } from './views/petView'
+import { Pet, PetStatus, PetsWithSameName } from '@interfaces/IPet'
+import { petController, PetController } from '@controllers/petController'
+import { petView } from '@views/petView'
 
 /** Entry point of the program. */
 async function main() {

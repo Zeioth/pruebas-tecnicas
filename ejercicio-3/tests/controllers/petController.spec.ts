@@ -1,6 +1,6 @@
-import { Pet, PetsWithSameName, PetStatus } from '../../src/interfaces/IPet'
-import { petController } from '../../src/controllers/petController'
-import { arrayOfPets1 } from '../../src/fixtures/arrayOfPets'
+import { Pet, PetsWithSameName, PetStatus } from '@interfaces/IPet'
+import { petController } from '@controllers/petController'
+import { arrayOfPets1 } from '@fixtures/arrayOfPets'
 
 describe('petController', () => {
   it('should GET a list of pets by calling getPets() and expect a `Pet[]` interface.', async () => {

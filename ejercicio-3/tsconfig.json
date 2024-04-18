@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "target": "ES2022",
     "module": "commonjs",
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@controllers/*": ["src/controllers/*"],
+      "@fixtures/*": ["src/fixtures/*"],
+      "@interfaces/*": ["src/interfaces/*"],
+      "@services/*": ["src/services/*"],
+      "@views/*": ["src/views/*"]
+    }
   }
 }
