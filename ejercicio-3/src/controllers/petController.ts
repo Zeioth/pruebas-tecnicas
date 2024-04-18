@@ -1,6 +1,6 @@
 import axios from 'axios'
-import logger from '../services/logger.service'
-import { Pet, PetStatus, PetsWithSameName } from '../interfaces/IPet'
+import logger from '@services/logger.service'
+import { Pet, PetStatus, PetsWithSameName } from '@interfaces/IPet'
 
 /**
  * Class to manage the 'pet' entpoint.

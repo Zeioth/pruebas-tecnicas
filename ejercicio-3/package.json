@@ -5,7 +5,7 @@
   "description": "POST and GET a user to the swagger example API.",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "npx tsc && node ./dist/src/index.js",
+    "start": "npx tsc && npx tsc-alias && node ./dist/src/index.js",
     "test": "jest"
   },
   "keywords": [],
@@ -23,7 +23,8 @@
   "dependencies": {
     "axios": "^1.6.8",
     "http-status-codes": "^2.3.0",
-    "pino": "^8.20.0"
+    "pino": "^8.20.0",
+    "tsc-alias": "^1.8.8"
   },
   "jest": {
     "preset": "ts-jest",
@@ -33,7 +34,14 @@
       "node_modules",
       "dist",
       "tests"
-    ]
+    ],
+    "moduleNameMapper": {
+      "^@services/(.*)$": "<rootDir>/src/services/$1",
+      "^@controllers/(.*)$": "<rootDir>/src/controllers/$1",
+      "^@fixtures/(.*)$": "<rootDir>/src/fixtures/$1",
+      "^@interfaces/(.*)$": "<rootDir>/src/interfaces/$1",
+      "^@views/(.*)$": "<rootDir>/src/views/$1"
+    }
   },
   "husky": {
     "hooks": {

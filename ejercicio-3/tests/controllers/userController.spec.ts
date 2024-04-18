@@ -1,8 +1,8 @@
 import { StatusCodes as StatusCode } from 'http-status-codes'
 
-import { User } from '../../src/interfaces/IUser'
-import { userController } from '../../src/controllers/userController'
-import { newUser1 } from '../../src/fixtures/newUser1'
+import { User } from '@interfaces/IUser'
+import { userController } from '@controllers/userController'
+import { newUser1 } from '@fixtures/newUser1'
 
 describe('UserController', () => {
   it('should POST user(s) by calling createUsers() and expect a OK status code.', async () => {

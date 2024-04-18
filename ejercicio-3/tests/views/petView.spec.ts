@@ -1,5 +1,5 @@
-import { petView } from '../../src/views/petView'
-import { arrayOfPets1 } from '../../src/fixtures/arrayOfPets'
+import { petView } from '@views/petView'
+import { arrayOfPets1 } from '@fixtures/arrayOfPets'
 
 describe('petView', () => {
   it('should print a list of pets in the correct format', async () => {

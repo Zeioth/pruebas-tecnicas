@@ -1,4 +1,4 @@
-import { User } from '../interfaces/IUser'
+import { User } from '@interfaces/IUser'
 
 /** Example data to insert a new user into the endpoint
  * https://petstore.swagger.io/v2/user/createWithArray
