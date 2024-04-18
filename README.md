@@ -64,7 +64,7 @@ npm test
 
 * Ahora los errores son logueados usando el sistema de logging [pino](https://github.com/pinojs/pino), para lo cual hemos creado un servicio singleton.
 
-![screenshot_2024-04-17_23-00-00_838489720](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/fdddc816-b43f-4e9c-9962-e962f91f6223)
+![screenshot_2024-04-18_01-43-12_935941307](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/1eca364f-88ea-4266-a206-0eea30f59cb0)
 
 * Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. [Está disponible en acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
 ![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
