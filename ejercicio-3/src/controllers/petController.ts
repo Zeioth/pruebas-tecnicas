@@ -79,9 +79,7 @@ export class PetController {
           nameCounts[pet.name] = 1
         }
       } catch (error) {
-        /* NOTE: For the sake of this interview, we are silencing this error,
-         *       but in production this should be logged. */
-        // console.error('Error:', error)
+        logger.error(error)
       }
 
     })
