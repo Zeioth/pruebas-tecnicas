@@ -5,8 +5,8 @@
   "description": "POST and GET a user to the swagger example API.",
   "main": "./src/index.ts",
   "scripts": {
-    "start": "npx tsc && npx tsc-alias && node ./dist/src/index.js",
-    "test": "npx tsc && npx tsc-alias && jest"
+    "start": "tsc && tsc-alias && node ./dist/src/index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "Jose Adrian Lopez Nuñez",
@@ -41,7 +41,10 @@
       "^@fixtures/(.*)$": "<rootDir>/src/fixtures/$1",
       "^@interfaces/(.*)$": "<rootDir>/src/interfaces/$1",
       "^@views/(.*)$": "<rootDir>/src/views/$1"
-    }
+    },
+    "testMatch": [
+      "**/tests/**/*.+(ts)"
+    ]
   },
   "husky": {
     "hooks": {
