@@ -42,7 +42,6 @@ describe('petController', () => {
         pc = new PetController(pets)
         pc.setPetsProp = pets
         pwsn = await pc.countPetsWithSameName(pc.getPetsProp)
-        console.log(pwsn)
       }
 
       // assert pets
