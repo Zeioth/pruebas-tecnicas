@@ -26,7 +26,7 @@ describe('logger', () => {
     logger.warn(expectedLogs[1].msg)
     logger.error(expectedLogs[2].msg)
     logger.flush()                                          // force disk write.
-    await new Promise(resolve => setTimeout(resolve, 100)) // delay 1s.
+    await new Promise(resolve => setTimeout(resolve, 10)) // delay 0.01s.
 
     // assert → 'expectedLogs' are the latest lines written in the logs file
     logContent = fs.readFileSync(logFilePath, 'utf8')
