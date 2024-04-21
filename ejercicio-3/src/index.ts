@@ -40,7 +40,7 @@ async function main() {
   // Here we are forced to use a constructor, so it's cleaner to use 'get/set'.
   const pc: PetController = new PetController(pets)
   pc.setPetsProp = pets
-  const pwsm: PetsWithSameName = await pc.countPetsWithSameName(pc.getPetsProp)
-  console.log(pwsm)
+  const pwsn: PetsWithSameName = await pc.countPetsWithSameName(pc.getPetsProp)
+  console.log(pwsn)
 }
 main()
