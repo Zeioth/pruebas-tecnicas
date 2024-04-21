@@ -21,7 +21,8 @@ describe('logger', () => {
     jest.clearAllMocks()
   })
 
-  it('should use the logger to write into the default log file correctly.', async () => {
+  it(`should use the logger to write
+      into the default log file correctly.`, async () => {
     // arrange
     const expectedLogs: LogLine[] = [
       { level: 'INFO', msg: 'THIS IS A UNIT TEST.' },

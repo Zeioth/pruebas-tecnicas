@@ -40,8 +40,11 @@ describe('userController', () => {
     expect(status).toBe(StatusCode.INTERNAL_SERVER_ERROR)
   })
 
-  it(`should GET a user by calling getUser()
-      and expect a \`User\` interface.`, async () => {
+  it(`should GET newUser1 by calling getUser()
+      and assert the returned object matches newUser1.`, async () => {
+    // Note: Because we are using a public REST API, you might have to run
+    //       this test two times before it passes.
+
     // arrange
     let user = null
 
@@ -51,7 +54,16 @@ describe('userController', () => {
     // assert
     expect(user).not.toBeUndefined
     expect(user).not.toBeNull
-    expect(user).toMatchObject<User>
+    expect(user).toMatchObject<User>({
+      id: expect.any(Number),
+      username: newUser1[0].username,
+      firstName: newUser1[0].firstName,
+      lastName: newUser1[0].lastName,
+      email: newUser1[0].email,
+      password: newUser1[0].password,
+      phone: newUser1[0].phone,
+      userStatus: 0,
+    })
   })
 
   it(`should GET a user by calling getUser()
