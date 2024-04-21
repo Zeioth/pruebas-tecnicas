@@ -20,7 +20,7 @@ class LoggerService {
   })
 
   /** Default constructor.
-   *  It ensures 'logsDir' is created. */
+   *  It ensures 'logsDir' has been created. */
   constructor() {
     fs.mkdirSync(this.logsDir, { recursive: true })
   }
