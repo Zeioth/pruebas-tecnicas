@@ -26,6 +26,12 @@ describe('logger', () => {
     logger.warn(expectedLogs[1].msg)
     logger.error(expectedLogs[2].msg)
 
+    // NOTE: For GitHub actions, even if we 'flush' to trigger a disk write,
+    //       introducing a ~10ms delay is required for the assertions to pass.
+    //       This is still true even using the 'flush' callback is in the docs.
+    logger.flush()
+    await new Promise(resolve => setTimeout(resolve, 1000)) // x100 as strong.
+
     // assert → 'expectedLogs' are the latest lines written in the logs file
     logContent = fs.readFileSync(logFilePath, 'utf8')
     logContentLines = logContent.trim().split('\n')

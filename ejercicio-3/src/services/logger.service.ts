@@ -21,7 +21,8 @@ class LoggerService {
     fs.mkdirSync(this.logsDir, { recursive: true })
     this.stream = pino.destination({
       dest: this.logFilePath,
-      sync: true
+      minLength: 4096,
+      sync: false
     })
   }
 
