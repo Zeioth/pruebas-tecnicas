@@ -13,17 +13,16 @@ class LoggerService {
   private readonly logFilePath: string = path.join(
     this.logsDir, this.logFileName
   )
-  private readonly stream: DestinationStream
+  private readonly stream: DestinationStream = pino.destination({
+    dest: this.logFilePath,
+    minLength: 4096,
+    sync: false
+  })
 
   /** Default constructor.
-   *  It ensures 'logsDir' is created and the stream opened. */
+   *  It ensures 'logsDir' is created. */
   constructor() {
     fs.mkdirSync(this.logsDir, { recursive: true })
-    this.stream = pino.destination({
-      dest: this.logFilePath,
-      minLength: 4096,
-      sync: false
-    })
   }
 
   /** Returns a logger object with our default opts. */
