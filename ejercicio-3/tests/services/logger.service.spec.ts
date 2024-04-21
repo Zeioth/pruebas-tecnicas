@@ -1,10 +1,3 @@
-/** NOTE: This tests write into the actual log file.
- *        If you don't want this behavior, comment this file.
- *
- *        - Mocking the tests won't ensure the service works as expected.
- *        - Removing the content written by the service
- *          would introduce unnecesary integrity risk. */
-
 import logger from '@services/logger.service'
 import fs from 'fs'
 import path from 'path'
@@ -32,17 +25,17 @@ describe('logger', () => {
     logger.info(expectedLogs[0].msg)
     logger.warn(expectedLogs[1].msg)
     logger.error(expectedLogs[2].msg)
-    logger.flush()
-    await new Promise(resolve => setTimeout(resolve, 1000)) // give time to write.
+    logger.flush(() => {
+      // assert → 'expectedLogs' are the latest lines written in the logs file
+      logContent = fs.readFileSync(logFilePath, 'utf8')
+      logContentLines = logContent.trim().split('\n')
+      last3LinesAsJson = logContentLines.slice(-3).map(
+        (line: string) => JSON.parse(line))
+      last3LinesAsJson.forEach((line: LogLine, index: number) => {
+        expect(line.level).toBe(expectedLogs[index].level)
+        expect(line.msg).toBe(expectedLogs[index].msg)
+      })
 
-    // assert → 'expectedLogs' are the latest lines written in the logs file
-    logContent = fs.readFileSync(logFilePath, 'utf8')
-    logContentLines = logContent.trim().split('\n')
-    last3LinesAsJson = logContentLines.slice(-3).map(
-      (line: string) => JSON.parse(line))
-    last3LinesAsJson.forEach((line: LogLine, index: number) => {
-      expect(line.level).toBe(expectedLogs[index].level)
-      expect(line.msg).toBe(expectedLogs[index].msg)
     })
   })
 })
