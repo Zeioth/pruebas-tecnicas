@@ -32,7 +32,11 @@ describe('logger', () => {
     logger.info(expectedLogs[0].msg)
     logger.warn(expectedLogs[1].msg)
     logger.error(expectedLogs[2].msg)
-    logger.flush() // force writing the logs on disk.
+    await new Promise<void>((resolve) => {
+      logger.flush(() => {
+        resolve(); // Wait until the logs are actually written into disk.
+      });
+    });
 
     // assert → 'expectedLogs' are the latest lines written in the logs file
     logContent = fs.readFileSync(logFilePath, 'utf8')
