@@ -1,4 +1,4 @@
-import pino, { LoggerOptions } from 'pino'
+import pino, { DestinationStream, LoggerOptions } from 'pino'
 import path from 'path'
 import fs from 'fs'
 
@@ -13,20 +13,20 @@ class LoggerService {
   private readonly logFilePath: string = path.join(
     this.logsDir, this.logFileName
   )
-  private readonly stream: fs.WriteStream
+  private readonly stream: DestinationStream = pino.destination({
+    dest: this.logFilePath,
+    minLength: 4096,
+    sync: false
+  })
 
   /** Default constructor.
-   *  It ensures 'logsDir' is created and the stream opened. */
+   *  It ensures 'logsDir' has been created. */
   constructor() {
     fs.mkdirSync(this.logsDir, { recursive: true })
-    this.stream = fs.createWriteStream(
-      this.logFilePath,
-      { flags: 'a' } // 'append' instead of re-creating the log per session.
-    )
   }
 
   /** Returns a logger object with our default opts. */
-  getLogger(): pino.Logger{
+  getLogger(): pino.Logger {
     // Set logger options
     const loggerOpts: LoggerOptions = {
       level: process.env.PINO_LOG_LEVEL || 'info',
