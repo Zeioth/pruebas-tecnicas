@@ -64,4 +64,3 @@ class LoggerService {
 const loggerService = new LoggerService()
 const logger = loggerService.getLogger()
 export default logger
-
