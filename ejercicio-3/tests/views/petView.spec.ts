@@ -14,7 +14,8 @@ describe('petView', () => {
     expect(console.log).toHaveBeenCalledTimes(arrayOfPets1.length);
     arrayOfPets1.forEach((pet, index) => {
       // Ensure the format of each log message is correct for every pet.
-      expect(console.log).toHaveBeenNthCalledWith(index + 1, expect.stringMatching(`{${pet.id}, "${pet.name}"\\s*}`));
+      expect(console.log).toHaveBeenNthCalledWith(
+        index + 1, expect.stringMatching(`{${pet.id}, "${pet.name}"\\s*}`));
     });
     console.log = originalLog
   })
