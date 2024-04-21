@@ -55,7 +55,7 @@ Puedes correrlos con
 ```sh
 npm test
 ```
-![screenshot_2024-04-17_02-40-19_845296640](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/bb9ec063-7e54-4c30-ab2a-28bc8083f227)
+![screenshot_2024-04-22_00-19-18_145755698](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/01640770-78c9-49f7-ba05-dcaf7f75631f)
 
 ## Features extra
 * Los comentarios añadidos al ejecicio 3 soportan LSP docstring.
