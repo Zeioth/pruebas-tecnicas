@@ -5,10 +5,10 @@ import logger from '@services/logger.service'
 
 // Mock functions, so we don't require disk storage.
 jest.mock('@services/logger.service')
-const mockLogWridtenInDisk = jest.fn(() => { return "THIS IS A UNIT TEST" })
-logger.info = mockLogWridtenInDisk
-logger.warn = mockLogWridtenInDisk
-logger.error = mockLogWridtenInDisk
+const mockLogWrittenInDisk = jest.fn(() => { return "THIS IS A UNIT TEST" })
+logger.info = mockLogWrittenInDisk
+logger.warn = mockLogWrittenInDisk
+logger.error = mockLogWrittenInDisk
 
 /** It represents the expected structure of a log line within this test file. */
 interface LogLine {
