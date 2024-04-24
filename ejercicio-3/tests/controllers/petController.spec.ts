@@ -36,8 +36,6 @@ describe('petController', () => {
     ]))
   }),
 
-
-
   it(`should GET pets and count the ones with the same name
       using the a controller class (hard requirement).`, async () => {
     // arrange
