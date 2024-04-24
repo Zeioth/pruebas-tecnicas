@@ -60,14 +60,14 @@ npm test
 
 ![screenshot_2023-10-18_00-11-34_742000737](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/07fe4dcf-bda1-4925-a3ea-58c55a228743)
 
-* Ahora los errores son logueados usando el sistema de logging [pino](https://github.com/pinojs/pino), para lo cual hemos creado un servicio singleton.
+* Los errores son logueados usando el sistema de logging [pino](https://github.com/pinojs/pino), para lo cual hemos creado un servicio singleton.
 
 ![screenshot_2024-04-18_01-43-12_935941307](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/1eca364f-88ea-4266-a206-0eea30f59cb0)
 
 * Se ha creado una acción GitHub de integración continua para requerir que `npm test` pase correctamente antes de permitir que un pull request se integre en la rama `main`. [Está disponible en acciones](https://github.com/Zeioth/pruebas-tecnicas/actions).
 ![screenshot_2024-04-18_00-39-23_494334458](https://github.com/Zeioth/pruebas-tecnicas/assets/3357792/8dadfd4e-1492-4518-9074-677868c325fd)
 
-* Ademas usamos Husky para que los tests corran localmente de forma automatica al hacer push. Esto no impide el push, pero informa al desarrollador en caso de regresión al publicar cambios en su rama.
+* Usamos Husky para que los tests corran localmente de forma automatica al hacer push. Esto no impide el push, pero informa al desarrollador en caso de regresión al publicar cambios en su rama.
 ```json
 "husky": {
   "hooks": {
